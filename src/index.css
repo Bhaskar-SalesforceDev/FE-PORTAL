@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply antialiased;
+  }
+  body {
+    @apply bg-slate-50 text-slate-900 font-sans min-h-screen;
+  }
+}
+
+/* Mobile touch-friendly tap targets */
+@layer utilities {
+  .tap-highlight-none {
+    -webkit-tap-highlight-color: transparent;
+  }
+  .pb-safe {
+    padding-bottom: env(safe-area-inset-bottom, 0);
+  }
+}
